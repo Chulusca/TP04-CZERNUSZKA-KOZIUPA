@@ -1,6 +1,6 @@
 namespace TP04_CZERNUSZKA_KOZIUPA.Models;
 
-class Indumentaria{
+public class Indumentaria{
     public string medias{get;private set;}
     public string pantalon{get;private set;}
     public string camiseta{get;private set;}
