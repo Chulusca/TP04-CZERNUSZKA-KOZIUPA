@@ -14,9 +14,9 @@ public static class Equipos{
         "", "", "", "", "", "", "", "", "", ""
     };
     
-    public static Dictionary<string, Indumentaria>dicIndumentaria {get; private set;} = new Dictionary<string, Indumentaria>();
+    public static Dictionary<int, Indumentaria>dicIndumentaria {get; private set;} = new Dictionary<int, Indumentaria>();
 
-    public static bool IngresarIndumentaria(string Equipo, Indumentaria item){
+    public static bool IngresarIndumentaria(int Equipo, Indumentaria item){
         if (dicIndumentaria.ContainsKey(Equipo)){
             return false;
         }

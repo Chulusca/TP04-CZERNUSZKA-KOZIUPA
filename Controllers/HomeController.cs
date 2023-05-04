@@ -18,6 +18,10 @@ public class HomeController : Controller
         return View("SelectIndumentaria");
     }
     IActionResult GuardarIndumentaria(int Equipo, int Media, int Pantalon, int Remera){
+        Indumentaria item = new Indumentaria(Media,Pantalon,Remera);
+        if(Equipos.IngresarIndumentaria(Equipo, item)){
+            
+        }
         return View();
     }
 }

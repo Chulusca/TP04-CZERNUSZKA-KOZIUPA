@@ -1,11 +1,11 @@
 namespace TP04_CZERNUSZKA_KOZIUPA.Models;
 
 public class Indumentaria{
-    public string medias{get;private set;}
-    public string pantalon{get;private set;}
-    public string camiseta{get;private set;}
+    public int medias{get;private set;}
+    public int pantalon{get;private set;}
+    public int camiseta{get;private set;}
 
-    public Indumentaria(string m, string p, string c){
+    public Indumentaria(int m, int p, int c){
         medias = m; pantalon = p; camiseta = c;
     }
     public Indumentaria(){
