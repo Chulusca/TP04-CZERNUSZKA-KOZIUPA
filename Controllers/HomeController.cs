@@ -20,8 +20,11 @@ public class HomeController : Controller
     IActionResult GuardarIndumentaria(int Equipo, int Media, int Pantalon, int Remera){
         Indumentaria item = new Indumentaria(Media,Pantalon,Remera);
         if(Equipos.IngresarIndumentaria(Equipo, item)){
-            
+            return RedirectToAction("Index");
         }
-        return View();
+        else{
+            ViewBag.MsjError = "Se cargo incorrectamente los datos.";
+            return RedirectToAction("SelectIndumentaria");
+        }
     }
 }
