@@ -10,10 +10,11 @@
     <title>Equipos</title>
 </head>
 <body>
+
     @foreach (int key in ViewBag.DicIndumentaria)
     {
         <div>
-            <h3>@ViewBag.ListaEquipos[key]</h3>
+            <h5>@ViewBag.ListaEquipos[key]</h5>
             <img src = 'img_medias/@ViewBag.ListaMedias[0]' alt= "Medias">
             <img src = 'img_medias/@ViewBag.ListaPantalones[0]' alt= "Pantalon">
             <img src = 'img_medias/@ViewBag.ListaRemeras[0]' alt= "Remera">
