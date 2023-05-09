@@ -5,7 +5,7 @@ public static class Equipos{
         "River", "Boca", "San Lorenzo", "Riestra", "Barracas Central", "Aldosivi", "Estudiantes de la plata", "Instituto", "Chacarita", "Nueva Chicago"
     };
     public static List<string>ListaMedias {get;private set;} = new List<string>() {
-        "", "", "", "", "", "", "", "", "", ""
+        "medias_amarillas.png", "medias_azules.png", "medias_blancas.png", "medias_bordo.png", "medias_grises.png", "medias_negras.png", "medias_negras2.png", "medias_rojas", "medias_verdeneon.png", "medias_verde.png"
     };
     public static List<string>ListaPantalones {get;private set;} = new List<string>() {
         "", "", "", "", "", "", "", "", "", ""

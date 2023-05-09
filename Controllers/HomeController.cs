@@ -8,6 +8,10 @@ public class HomeController : Controller
     public IActionResult Index() 
     {
         ViewBag.DicIndumentaria = Equipos.dicIndumentaria;
+        ViewBag.ListaEquipos = Equipos.ListaEquipos;
+        ViewBag.ListaPantalones = Equipos.ListaPantalones;
+        ViewBag.ListaMedias = Equipos.ListaMedias;
+        ViewBag.ListaRemeras = Equipos.ListaRemeras;
         return View();
     }
     public IActionResult SelectIndumentaria(){
