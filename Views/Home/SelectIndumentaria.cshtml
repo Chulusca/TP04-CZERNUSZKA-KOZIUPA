@@ -10,9 +10,27 @@
     <title>Selecionar indumentaria</title>
 </head>
 <body>
-    <form >
-
-
+    <form method="post" action= '@Url.Action("GuardarIndumentaria", "HomeController")'>
+        @foreach (string e in ViewBag.ListaEquipos)
+        {
+            <h4>@e</h4>
+        }
+        <br><br>
+        @foreach (string item in ViewBag.ListaRemeras)
+        {
+            <img src = 'img_remeras/@item' alt= "Remera">
+        }
+        <br><br>
+        @foreach (string item in ViewBag.ListaPantalones)
+        {
+            <img src = 'img_pantalones/@item' alt= "Pantalones">
+        }
+        <br><br>
+        @foreach (string item in ViewBag.ListaMedias)
+        {
+            <img src = 'img_medias/@item' alt= "Medias">
+        }
+        <br><br>
     </form>
 </body>
 </html>

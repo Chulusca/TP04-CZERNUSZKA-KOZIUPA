@@ -21,7 +21,7 @@ public class HomeController : Controller
         ViewBag.ListaRemeras = Equipos.ListaRemeras;
         return View("SelectIndumentaria");
     }
-    IActionResult GuardarIndumentaria(int Equipo, int Media, int Pantalon, int Remera){
+    public IActionResult GuardarIndumentaria(int Equipo, int Media, int Pantalon, int Remera){
         Indumentaria item = new Indumentaria(Media,Pantalon,Remera);
         if(Equipos.IngresarIndumentaria(Equipo, item)){
             return RedirectToAction("Index");
