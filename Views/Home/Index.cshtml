@@ -11,6 +11,8 @@
 </head>
 <body>
 
+    <h2><a href='@Url.Action("SelectIndumentaria")' alt = "Crear Indumentaria">Crear Indumentaria</a></h2>
+
     @foreach (int key in ViewBag.DicIndumentaria)
     {
         <div>
@@ -21,8 +23,6 @@
         </div>
     }
     
-    <img src = 'img_medias/@ViewBag.ListaMedias[0]' alt= "Medias">
-
 </body>
 </html>
 
