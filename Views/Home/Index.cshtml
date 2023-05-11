@@ -13,13 +13,13 @@
 
     <h2><a href='@Url.Action("SelectIndumentaria")' alt = "Crear Indumentaria">Crear Indumentaria</a></h2>
 
-    @foreach (int key in ViewBag.DicIndumentaria)
+    @foreach (int key in ViewBag.DicIndumentaria.Keys)
     {
         <div>
             <h5>@ViewBag.ListaEquipos[key]</h5>
-            <img src = 'img_medias/@ViewBag.ListaMedias[0]' alt= "Medias">
-            <img src = 'img_medias/@ViewBag.ListaPantalones[0]' alt= "Pantalon">
-            <img src = 'img_medias/@ViewBag.ListaRemeras[0]' alt= "Remera">
+            <img src = '/img_remeras/@ViewBag.ListaRemeras[key]' alt= "Remera" width="150px" height="150px">
+            <img src = '/img_pantalones/@ViewBag.ListaPantalones[key]' alt= "Pantalon" width="150px" height="150px">
+            <img src = '/img_medias/@ViewBag.ListaMedias[key]' alt= "Medias" width="150px" height="150px">        
         </div>
     }
 

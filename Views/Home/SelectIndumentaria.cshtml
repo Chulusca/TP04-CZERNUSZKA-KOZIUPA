@@ -10,27 +10,33 @@
     <title>Selecionar indumentaria</title>
 </head>
 <body>
-    <form method="post" action= '@Url.Action("GuardarIndumentaria", "HomeController")'>
+    <form method="post" action= '@Url.Action("GuardarIndumentaria")'>
         @foreach (string e in ViewBag.ListaEquipos)
         {
             <h4>@e</h4>
         }
         <br><br>
+        <input type = "number" max="10" min="1" step="1" name="Equipo" required/><br/>
         @foreach (string item in ViewBag.ListaRemeras)
         {
-            <img src = 'img_remeras/@item' alt= "Remera">
+            <img src = '/img_remeras/@item' alt= "Remera" width="150px" height="150px">
         }
+        <input type = "number" max="10" min="1" step="1" name="Remera"  required/><br/>
         <br><br>
         @foreach (string item in ViewBag.ListaPantalones)
         {
-            <img src = 'img_pantalones/@item' alt= "Pantalones">
+            <img src = '/img_pantalones/@item' alt= "Pantalones" width="150px" height="150px">
         }
+        <input type = "number" max="10" min="1" step="1" name="Pantalon" required/><br/>
         <br><br>
         @foreach (string item in ViewBag.ListaMedias)
         {
-            <img src = 'img_medias/@item' alt= "Medias">
+            <img src = '/img_medias/@item' alt= "Medias" width="150px" height="150px">
         }
-        <br><br>
+        <input type = "number" max="10" min="1" step="1" name="Media" required/><br/>
+        <br>
+        <input type = "submit" value = "Enviar Datos">
+        <br><br><br>
     </form>
 </body>
 </html>

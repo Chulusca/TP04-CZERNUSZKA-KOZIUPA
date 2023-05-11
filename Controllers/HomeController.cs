@@ -21,14 +21,9 @@ public class HomeController : Controller
         ViewBag.ListaRemeras = Equipos.ListaRemeras;
         return View("SelectIndumentaria");
     }
-    public IActionResult GuardarIndumentaria(int Equipo, int Media, int Pantalon, int Remera){
-        Indumentaria item = new Indumentaria(Media,Pantalon,Remera);
-        if(Equipos.IngresarIndumentaria(Equipo, item)){
-            return RedirectToAction("Index");
-        }
-        else{
-            ViewBag.MsjError = "Se cargo incorrectamente los datos.";
-            return RedirectToAction("SelectIndumentaria");
-        }
+    public IActionResult GuardarIndumentaria(int Equipo, int Remera, int Pantalon, int Media){
+        Indumentaria item = new Indumentaria(Media - 1,Pantalon - 1,Remera - 1);
+        Equipos.IngresarIndumentaria(Equipo, item);
+        return RedirectToAction("Index");
     }
 }
