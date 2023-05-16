@@ -22,7 +22,7 @@ public class HomeController : Controller
         return View("SelectIndumentaria");
     }
     public IActionResult GuardarIndumentaria(int Equipo, int Remera, int Pantalon, int Media){
-        Indumentaria item = new Indumentaria(Media - 1,Pantalon - 1,Remera - 1);
+        Indumentaria item = new Indumentaria(Media ,Pantalon ,Remera );
         Equipos.IngresarIndumentaria(Equipo, item);
         return RedirectToAction("Index");
     }
